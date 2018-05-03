@@ -1,0 +1,41 @@
+int x_ball;  int y_ball;  
+ int x_bar;  
+ int speed1 = 10;  int speed2 = 15; 
+ void setup() {    size(1000, 700);  
+ x_ball = width/2;    y_ball = height/2;  
+ x_bar = width/2;
+ } 
+ void draw() {
+ background(255);
+ ball();    
+ bar(); 
+ }  
+ void keyPressed() {  
+ if(keyCode == LEFT) {
+ x_bar = x_bar - 150;   
+ }   
+ if(keyCode == RIGHT) {  
+ x_bar = x_bar + 150; 
+ } 
+ println(x_bar); 
+ } 
+ void ball() {  
+ 
+ fill(50, 100, 100, 70);  
+ ellipse(x_ball, y_ball, 50, 50); 
+ x_ball = x_ball + speed1; 
+ if(x_ball > width || x_ball < 0) {
+ speed1 = speed1 * -1;  
+ }  
+ y_ball = y_ball + speed2; 
+ if(y_ball < 0){
+ speed2 = speed2 * -1; 
+ }
+ }   
+ void bar() {
+ rectMode(CENTER);  
+ fill(200, 100, 100);
+ rect(x_bar, height-10, 150, 10);
+ } 
+ 다음에 튕기는것도 
+ 
