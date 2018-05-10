@@ -1,0 +1,23 @@
+PFont f;
+float angle = 0;
+
+
+void setup(){
+  size(1000, 600);
+  f= createFont(" 고딕", 16);
+}
+
+void draw() {
+ background(255);
+ textFont(f, 36);
+ fill(60,30,60);
+ translate(width/2, height/2);
+ textAlign(CENTER);
+ rotate(angle);
+ text("정현이는 한손만 뻗는걸 못한다...",0,0);
+ angle += 0.01;
+
+}
+ 
+ 
+ 
