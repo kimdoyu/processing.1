@@ -1,0 +1,51 @@
+int x = 100;
+int y = 100;
+int z = 300;
+int t = 300;
+int tan = 192;
+int cos = tan/4;
+int thesize = 64;
+int offset = thesize/4;
+
+void setup(){
+size(1000,600);
+background(255);}
+
+//void draw(){
+//rectMode(CENTER);
+//stroke(0);
+//fill(175);
+//rect(x, y, thesize, thesize/2);
+//fill(0);
+//rect(x - offset, y - offset, offset, offset/2);
+//rect(x + offset, y - offset, offset, offset/2);
+//rect(x - offset, y + offset, offset, offset/2);
+//rect(x + offset, y + offset, offset, offset/2);
+//rectMode(CENTER);
+//stroke(0);
+//fill(175);
+//rect(z, t, tan, tan/2);
+//fill(0);
+//rect(z - cos, t - cos, cos, cos/2);
+//rect(z + cos, t - cos, cos, cos/2);
+//rect(z - cos, t + cos, cos, cos/2);
+//rect(z + cos, t + cos, cos, cos/2);}
+
+void draw(){
+  drawCar(200, 200, 100, color(255,10,255),50);
+  drawCar(400, 400, 100, color(255,10,255),30);
+}
+
+void drawCar(int x, int y, int thesize, color c, int offset){
+  rectMode(CENTER);
+stroke(0);
+fill(175);
+rect(x, y, thesize, thesize/2);
+fill(c);
+rect(x - offset, y - offset, offset, offset/2);
+rect(x + offset, y - offset, offset, offset/2);
+rect(x - offset, y + offset, offset, offset/2);
+rect(x + offset, y + offset, offset, offset/2);
+}
+
+  
