@@ -1,0 +1,84 @@
+//인텔  
+// constants won't change. They're used here to set pin numbers:
+const int buttonPin = 2;     // the number of the pushbutton pin      // the number of the LED pin
+const int q = 13;
+const int w = 12;
+const int e = 11;
+const int r = 10;
+const int t = 9;
+const int y = 8;
+
+// variables will change:
+int buttonState = 0;         // variable for reading the pushbutton status
+boolean state = false;
+
+void setup() {
+  // initialize the LED pin as an output:
+  pinMode(q, OUTPUT);
+  pinMode(w, OUTPUT);
+  pinMode(e, OUTPUT);
+  pinMode(r, OUTPUT);
+  pinMode(t, OUTPUT);
+  pinMode(y, OUTPUT);
+  // initialize the pushbutton pin as an input:
+  pinMode(buttonPin, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  // read the state of the pushbutton value:
+  buttonState = digitalRead(buttonPin);
+  Serial.print(buttonState);
+  Serial.print("  ");
+  // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
+  if (buttonState == LOW) {
+    // turn LED on:
+    
+  digitalWrite(q, HIGH); 
+  digitalWrite(w,  LOW); 
+  digitalWrite(e, LOW); 
+  digitalWrite(r,  HIGH); 
+  digitalWrite(t,  HIGH); 
+  digitalWrite(y, LOW); 
+  delay(1000);           
+  digitalWrite(q,  HIGH); 
+  digitalWrite(w,  HIGH); 
+  digitalWrite(e, LOW); 
+  digitalWrite(r, LOW); 
+  digitalWrite(t,  LOW); 
+  digitalWrite(y,  LOW); 
+  delay(1000);       
+    digitalWrite(q,  HIGH); 
+  digitalWrite(w,  LOW); 
+  digitalWrite(e, HIGH); 
+  digitalWrite(r, HIGH); 
+  digitalWrite(t, LOW); 
+  digitalWrite(y, LOW); 
+  delay(1000); 
+  digitalWrite(q, HIGH); 
+  digitalWrite(w, HIGH); 
+  digitalWrite(e,  LOW); 
+  digitalWrite(r,  HIGH); 
+  digitalWrite(t,  HIGH); 
+  digitalWrite(y,  LOW); 
+  delay(1000);           
+  digitalWrite(q, LOW); 
+  digitalWrite(w,  LOW); 
+  digitalWrite(e,  HIGH); 
+  digitalWrite(r, LOW); 
+  digitalWrite(t,  LOW); 
+  digitalWrite(y, LOW); 
+  delay(1000);       
+  digitalWrite(q,  LOW); 
+  digitalWrite(w,  LOW); 
+  digitalWrite(e, LOW); 
+  digitalWrite(r, LOW); 
+  digitalWrite(t, LOW); 
+  digitalWrite(y, LOW);
+  state = !state;
+
+   }
+    Serial.println(state);
+    
+
+}
