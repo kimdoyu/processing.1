@@ -1,6 +1,6 @@
-//삼성1 
-//인텔2
-// constants won't change. They're used here to set pin numbers:
+//삼성2
+//인텔1
+// consants won't change. They're used here to set pin numbers:
 const int buttonPin1 = 1; 
 const int buttonPin2 = 2; // the number of the pushbutton pin      // the number of the LED pin
 const int q = 13;
